@@ -2,7 +2,7 @@
  * Partiendo de un documento html vacío, crea los elementos HTML de una calculadora mediante los métodos del objeto predefinido document.
  * @author Tomás
  */
-
+{
 document.addEventListener("DOMContentLoaded", function(){
 
     //Boton para introducir un número
@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function(){
     input.style.width="230px";
     input.style.textAlign="right";
     input.style.margin="5px";
+    input.disabled = true;
 
     //Div donde está todo
     let divPrincipal= document.createElement("div");
@@ -34,9 +35,20 @@ document.addEventListener("DOMContentLoaded", function(){
     //Insertar interfaz
     document.open();
     document.appendChild(divPrincipal);
-    document.close();
+    
 
     //Agregar funcionalidad
+    let botones=document.getElementsByTagName("button");
+
+    //Recorro cada boton y veo si ha sido pulsado para ejecutar la funcion correspondiente
+    // botones.forEach(boton=>{
+    //     boton.addEventListener("click", function(){
+    //         input.value=this.value;
+    //     });
+    // });
+
+
+    document.close();
 });
 
 //Funcion para crear un boton
@@ -52,4 +64,5 @@ const crearBoton=(valor)=>{
 
     return boton;
 
+}
 }
