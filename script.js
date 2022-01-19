@@ -104,7 +104,6 @@
                             calculadora.operacionActual = calculadora.operacionPosterior;
                             calculadora.operacionPosterior = valor;
                         }
-                        calculadora.asignarOperaciones(calculadora.operacionActual);
                         if (calculadora.realizarOperacion && !calculadora.nuevoValor)
                             calculadora.comprobarOperacion(calculadora.input.value);
                         calculadora.nuevoValor = true;
@@ -123,26 +122,6 @@
             calculadora.multiplicar=false;
             calculadora.dividir=false;
             calculadora.porcentaje=false;
-        },
-        asignarOperaciones(valor) {
-            calculadora.resetearOperadores();
-            switch (valor) {
-                case "+":
-                    calculadora.sumar = true;
-                    break;
-                case "-":
-                    calculadora.restar = true;
-                    break;
-                case "x":
-                    calculadora.multiplicar = true;
-                    break;
-                case "÷":
-                    calculadora.dividir = true;
-                    break;
-                case "%":
-                    calculadora.porcentaje = true;
-                    break;
-            }
         },
         calcularOperacion(){
             if (calculadora.sumar) {
