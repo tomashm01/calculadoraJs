@@ -141,7 +141,7 @@
                 case "x":
                     calculadora.multiplicar = true;
                     break;
-                case "/":
+                case "÷":
                     calculadora.dividir = true;
                     break;
                 case "%":
