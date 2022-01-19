@@ -209,11 +209,6 @@
         }
     }
     
-    document.addEventListener("DOMContentLoaded", function(){
-
-        calculadora.init();
-        document.body.appendChild(calculadora.divPrincipal);
-
-    });
+    document.addEventListener("DOMContentLoaded", calculadora.init);
     
 }
